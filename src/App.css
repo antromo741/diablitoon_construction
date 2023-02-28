@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Century+Gothic:wght@700&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --diablitoons-button-20: Inter;
+  --diablitoons-heading-40: "Century Gothic";
+
+  /* font sizes */
+  --diablitoons-button-16-size: 16px;
+  --diablitoons-button-20-size: 24px;
+  --diablitoons-heading-24-size: 30px;
+  --diablitoons-heading-40-size: 40px;
+  --font-size-2xl: 120px;
+
+  /* Colors */
+  --diablitoons-neutral-200: #f6f7fa;
+  --diablitoons-primary-100: #e03547;
+  --color-black: #000;
+  --diablitoons-neutral-100: #fff;
+  --diablitoons-neutral-600: #414141;
+  --diablitoons-neutral-700: #2d2d2d;
+  --diablitoons-neutral-400: #d3d5de;
+  --twitter: #1d9bf0;
+
+  /* Gaps */
+  --gap-sm: 20px;
+  --gap-md: 28px;
+  --gap-lg: 40px;
+
+  /* Paddings */
+  --padding-2xs: 4px;
+  --padding-xs: 8px;
+  --padding-sm: 12px;
+  --padding-md: 13px;
+  --padding-lg: 20px;
+  --padding-xl: 28px;
+  --padding-2xl: 120px;
+
+  /* border radiuses */
+  --br-xs: 4px;
+  --br-sm: 10px;
+  --br-md: 20px;
+  --br-lg: 40px;
+  --br-xl: 80px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+.App-header {
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* From the figma design */
+.x1080-whitebg-gif-11 {
+  position: absolute;
+  top: 0;
+  left: -242px;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+}
+.vector-icon2 {
+  position: relative;
+  width: 42px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.discord1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vector-icon3 {
+  position: relative;
+  width: 39.38px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.twitter1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.instagram-icon1,
+.opensea-icon1 {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+}
+.opensea-icon1 {
+  width: 33.06px;
+  height: 33.06px;
+}
+.social-header1 {
+  position: absolute;
+  top: 11px;
+  left: 1180px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-sm);
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-md);
+}
+.group-icon1 {
+  position: relative;
+  width: 46.78px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.logo-head1 {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.home3 {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.home2,
+.medium2 {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-md);
+}
+.home2 {
+  align-items: center;
+  justify-content: center;
+}
+.medium2 {
+  color: var(--diablitoons-neutral-600);
+}
+.header-button1,
+.header1,
+.medium2 {
+  align-items: center;
+  justify-content: center;
+}
+.header1 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-sm);
+}
+.header-button1 {
+  border-radius: var(--br-xs);
+  background-color: var(--diablitoons-primary-100);
+  padding: var(--padding-xs) var(--padding-xl);
+  color: var(--diablitoons-neutral-100);
+}
+.header-button1,
+.header-group,
+.header-main1 {
+  display: flex;
+  flex-direction: row;
+}
+.header-group {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.header-main1 {
+  position: absolute;
+  top: 0;
+  left: 324px;
+  border-radius: var(--br-lg);
+  padding: var(--padding-lg) 0;
+  align-items: center;
+  justify-content: center;
+}
+.x1080-whitebg-gif-1-group {
+  position: absolute;
+  top: 0;
+  left: 242px;
+  width: 1435.44px;
+  height: 85px;
+}
+.diablitoons-is5 {
+  position: relative;
+  font-weight: 600;
+}
+.diablitoons-is4 {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--color-black);
+}
+.art1,
+.family1,
+.mezcal1,
+.party1,
+.tacos1,
+.you1 {
+  position: absolute;
+  top: -15px;
+  left: 823px;
+  font-weight: 600;
+}
+.art1,
+.family1,
+.party1,
+.tacos1,
+.you1 {
+  top: 122px;
+}
+.art1,
+.family1,
+.tacos1,
+.you1 {
+  top: 267px;
+}
+.art1,
+.family1,
+.you1 {
+  top: 412px;
+}
+.art1,
+.you1 {
+  top: 557px;
+}
+.art1 {
+  top: -161px;
+}
+/* How Can I center this, the css isZ */
+.diablitoons-is3 {
+  position: absolute;
+  top: 483px;
+  left: 342px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: var(--font-size-2xl);
+  color: var(--diablitoons-primary-100);
+}
+.home-construction-2 {
+  position: relative;
+  background-color: var(--diablitoons-neutral-200);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--diablitoons-button-16-size);
+  color: var(--diablitoons-neutral-700);
+  font-family: var(--diablitoons-button-20);
+}
+/* .x1080-whitebg-gif-11 {
+  position: absolute;
+  top: 0;
+  left: -242px;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+}
+.vector-icon2 {
+  position: relative;
+  width: 42px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.discord1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vector-icon3 {
+  position: relative;
+  width: 39.38px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.twitter1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.instagram-icon1,
+.opensea-icon1 {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+}
+.opensea-icon1 {
+  width: 33.06px;
+  height: 33.06px;
+}
+.social-header1 {
+  position: absolute;
+  top: 11px;
+  left: 1180px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-sm);
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-md);
+}
+.group-icon1 {
+  position: relative;
+  width: 46.78px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.logo-head1 {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.home3 {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.home2,
+.medium2 {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-md);
+}
+.home2 {
+  align-items: center;
+  justify-content: center;
+}
+.medium2 {
+  color: var(--diablitoons-neutral-600);
+}
+.header-button1,
+.header1,
+.medium2 {
+  align-items: center;
+  justify-content: center;
+}
+.header1 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-sm);
+}
+.header-button1 {
+  border-radius: var(--br-xs);
+  background-color: var(--diablitoons-primary-100);
+  padding: var(--padding-xs) var(--padding-xl);
+  color: var(--diablitoons-neutral-100);
+}
+.header-button1,
+.header-group,
+.header-main1 {
+  display: flex;
+  flex-direction: row;
+}
+.header-group {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.header-main1 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  border-radius: var(--br-lg);
+  padding: var(--padding-lg) 0;
+  align-items: center;
+  justify-content: center;
+}
+.x1080-whitebg-gif-1-group {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 85px;
+  object-fit: cover;
+}
+.diablitoons-is5 {
+  position: relative;
+  font-weight: 600;
+}
+.diablitoons-is4 {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--color-black);
+}
+.art1,
+.family1,
+.mezcal1,
+.party1,
+.tacos1,
+.you1 {
+  position: absolute;
+  top: -15px;
+  left: 823px;
+  font-weight: 600;
+}
+.art1,
+.family1,
+.party1,
+.tacos1,
+.you1 {
+  top: 122px;
+}
+.art1,
+.family1,
+.tacos1,
+.you1 {
+  top: 267px;
+}
+.art1,
+.family1,
+.you1 {
+  top: 412px;
+}
+.art1,
+.you1 {
+  top: 557px;
+}
+.art1 {
+  top: -161px;
+}
+.diablitoons-is3 {
+  position: absolute;
+  top: 483px;
+  left: 342px;
+  width: 1290px;
+  height: 113px;
+  overflow: hidden;
+  font-size: var(--font-size-2xl);
+  color: var(--diablitoons-primary-100);
+}
+.home-construction-2 {
+  position: center;
+  justify-content: center;
+  background-color: var(--diablitoons-neutral-200);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--diablitoons-button-16-size);
+  color: var(--diablitoons-neutral-700);
+  font-family: var(--diablitoons-button-20);
+}
+ */
