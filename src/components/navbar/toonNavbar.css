@@ -2,28 +2,26 @@ header {
     background-color: #333;
     color: #fff;
     padding: 0.5rem;
-  }
-  
-  .nav-container {
+}
+
+.nav-container {
     flex-direction: row;
     padding: var(--padding-sm);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .logo-head {
+ 
+}
+
+.logo-head {
     padding: 1rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  
-  .nav-main {
+}
+
+.nav-main {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -31,45 +29,65 @@ header {
     padding: var(--padding-lg) 0;
     align-items: center;
     justify-content: center;
-  }
-  
-  .nav-group {
+}
+
+.nav-group {
     display: flex;
     flex-direction: row;
-  
+
     align-items: center;
     justify-content: center;
     gap: var(--gap-sm);
-  }
-  
-  .nav-text {
+    flex-grow: 1;
+}
+
+.nav-text {
     align-items: center;
     justify-content: center;
-  
+
     display: flex;
     flex-direction: row;
     gap: var(--gap-sm);
-  }
-  
-  .connect-wallet {
+}
+
+.connect-wallet {
     border-radius: var(--br-xs);
     background-color: var(--diablitoons-primary-100);
-    padding: var(--padding-xs) var(--padding-xl);
+    padding: 0.5rem 1rem;
     color: var(--diablitoons-neutral-100);
-  
+
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
-  }
-  
-  .social-header {
+}
+
+.social-header {
     display: flex;
     flex-direction: row;
     padding: var(--padding-sm);
     align-items: center;
     justify-content: center;
     gap: var(--gap-md);
-  }
+}
 
-  
+
+@media (max-width: 850px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .logo-head {
+        justify-content: start;
+    }
+    .nav-group {
+        flex-direction: column;
+    }
+
+    .nav-text {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+}

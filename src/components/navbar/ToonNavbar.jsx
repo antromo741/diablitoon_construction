@@ -1,7 +1,7 @@
 import React from 'react'
 import './toonNavbar.css'
 import { useCallback } from 'react'
-/* import videoBg from '././assets/toonwalk.mp4' */
+
 import twitterIcon from '../../assets/twittervector.svg'
 import discordIcon from '../../assets/discordvector.svg'
 import instagramIcon from '../../assets/instagram.svg'
