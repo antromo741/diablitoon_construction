@@ -1,8 +1,8 @@
 .main-page {
   position: relative;
   background-color: var(--diablitoons-neutral-200);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   font-size: var(--diablitoons-button-16-size);
   color: var(--diablitoons-neutral-700);
@@ -12,21 +12,19 @@
 .video {
   opacity: 1;
   transition: opacity 1s ease-in-out;
-  background-color: var(--diablitoons-neutral-200);
 }
 
 .videoHidden {
   opacity: 0;
-  background-color: var(--diablitoons-neutral-200);
 }
 
 .text {
+  width: 100%;
+  height: 100%;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
-  background-color: var(--diablitoons-neutral-200);
+  transition: opacity 5s ease-in-out;
 }
 
 .textVisible {
   opacity: 1;
-  background-color: var(--diablitoons-neutral-200);
 }
