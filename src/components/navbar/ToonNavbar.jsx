@@ -28,6 +28,7 @@ const ToonNavbar = () => {
   return (
     <div className="nav-container">
       {/* Nav logo */}
+
       <div className="menu-row">
         <div className="logo-head">
           <img className="head-logo" alt="" src={headLogo} />
@@ -36,6 +37,7 @@ const ToonNavbar = () => {
           <img className=".menu-icon" alt="" src={mobileMenuClosed} />
         </div>
       </div>
+
       <div className="nav-main">
         <div className="nav-group">
           {/* Nav titles */}
@@ -53,6 +55,7 @@ const ToonNavbar = () => {
           </div>
         </div>
       </div>
+      
       {/* Social media */}
       <div className="social-header">
         <img className="discord-icon" alt="" src={discordIcon} />
