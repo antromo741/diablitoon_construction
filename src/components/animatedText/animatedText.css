@@ -1,50 +1,60 @@
-
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100vh;
+  background-color: #5709ff;
+}
+
+section {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.diablitoons-text-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-2xl);
+  color: var(--diablitoons-primary-100);
+  width: 100%;
+  height: 100%;
+
+}
+
+.diablitoons-text-main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.diablitoons-text-start {
+  position: relative;
+  font-weight: 600;
+  color: var(--color-black);
+  padding: 1rem;
+  width: 800px;
+  background-color: #333;
   
-  section {
-    text-align: center;
-    max-width: 100%;
-  }
+}
+
+.mezcal1 {
+  position: relative;
+  font-weight: 600;
+  width: 450px;
   
-  .diablitoons-text-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  
-    font-size: var(--font-size-2xl);
-    color: var(--diablitoons-primary-100);
-  }
-  
-  .diablitoons-text-main {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-black);
-  }
-  .diablitoons-text-start {
-    position: relative;
-    font-weight: 600;
-    padding: 1rem;
-  }
-  
-  .art1,
-  .family1,
-  .mezcal1,
-  .party1,
-  .tacos1,
-  .you1 {
-    position: relative;
-    font-weight: 600;
-  }
-  
+  padding: 1rem;
+  /* Change this value as needed */
+  background-color: #a50808;
+}
