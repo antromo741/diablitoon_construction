@@ -7,7 +7,7 @@ const AnimatedText = () => {
   const [showCookingText, setShowCookingText] = useState(false)
 
   const words = ['Art', 'Mezcal', 'Party', 'Tacos', 'Family', 'YOU.']
-
+/* Error withthe logic of what words show */
   useEffect(() => {
     const interval = setInterval(() => {
       if (wordIndex === words.length - 1) {
