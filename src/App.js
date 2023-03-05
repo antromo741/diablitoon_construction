@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className='main-page'>
+        <ToonNavbar />
         <video
           className={showText ? "videoHidden" : "video"}
           src={videoWalk}
@@ -23,7 +24,7 @@ function App() {
           style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
         />
         <div className={showText ? "textVisible" : 'textHidden'}>
-          <ToonNavbar />
+
           <AnimatedText />
         </div>
       </div>

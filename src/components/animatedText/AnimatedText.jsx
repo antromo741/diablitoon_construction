@@ -25,6 +25,8 @@ const AnimatedText = () => {
 
   return (
     <main>
+   
+   
       <section>
         <div className="diablitoons-text-container">
           <div className="diablitoons-text-main">
