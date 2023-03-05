@@ -12,24 +12,27 @@ function App() {
   };
 
   return (
-      <div className="App">
-       
-        <div className='main-page'> 
-        <ToonNavbar /> 
-         <div className={showText ? "textVisible" : 'textHidden'}>
-            <AnimatedText />
-          </div>
-          <div className={showText ? "videoHidden" : "video"}>
-            <video
-              src={videoWalk}
-              autoPlay
-              muted
-              onEnded={handleVideoEnd}
-              style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
-            />
-          </div>
-        </div>
+    <div className="App">
+      <div className='divHeader'>
+        <ToonNavbar />
       </div>
+      <div className='main-page'>
+        <div className={showText ? "textVisible" : 'textHidden'}>
+          <AnimatedText />
+        </div>
+        <div >
+          <video className={showText ? "videoHidden" : "video"}
+            src={videoWalk}
+            autoPlay
+
+            muted
+            onEnded={handleVideoEnd}
+
+          />
+        </div>
+
+      </div>
+    </div>
   );
 }
 

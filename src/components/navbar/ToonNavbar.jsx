@@ -35,7 +35,7 @@ const ToonNavbar = () => {
             <img className="head-logo" alt="" src={headLogo} />
           </div>
           <div className="menu-btn" onClick={() => togglePanel()}>
-            <img className=".menu-icon" alt="" src={mobileMenuClosed} />
+            <img className="menu-icon" alt="" src={mobileMenuClosed} />
           </div>
         </div>
 

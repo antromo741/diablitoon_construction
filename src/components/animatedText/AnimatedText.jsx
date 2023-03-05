@@ -25,14 +25,12 @@ const AnimatedText = () => {
 
   return (
     <main>
-   
-   
       <section>
         <div className="diablitoons-text-container">
           <div className="diablitoons-text-main">
             <div
               className={` ${
-                showCookingText ? 'cooking-text-1' : 'diablitoons-text-start'
+                showCookingText ? 'cooking-text-start' : 'diablitoons-text-start'
               }`}
             >
               {showCookingText ? 'Cooking' : `Diablitoons is`}
