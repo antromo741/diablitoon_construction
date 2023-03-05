@@ -11,10 +11,13 @@
 
 .video {
   opacity: 1;
+  width: min-content;
+  height: min-content;
 }
 
 .videoHidden {
   opacity: 0;
+  display: none;
 }
 
 .textVisible {
@@ -32,4 +35,8 @@
   top: 0;
   left: 0;
   opacity: 0;
+}
+
+@media (max-width:850px) {
+  
 }
