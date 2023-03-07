@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import videoWalk from './assets/introvid.mp4';
+import desktopVideo  from './assets/introvid.mp4';
+import mobileVideo from "./assets/cropped/11.mp4"
 import toon from './assets/toon.gif'
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
@@ -12,23 +13,28 @@ function App() {
     setShowText(true);
   };
 
+  const isMobile = window.matchMedia('(max-width: 800px)').matches;
+
+  const videoSrc = isMobile ? mobileVideo : desktopVideo;
+
   return (
     <div className="App">
       <div className='divHeader'>
         <ToonNavbar />
       </div>
       <div className='main-page'>
+        
         <div className={showText ? "textVisible" : 'textHidden'}>
           <AnimatedText />
         </div>
 
-        <div className="toon-gif-container">
+        <div className={showText ? "toon-gif-container-visible" : "toon-gif-container-hidden"}>
           <img src={toon} alt="toon-gif" className="toon-gif" />
         </div>
 
         <div >
           <video className={showText ? "videoHidden" : "video"}
-            src={videoWalk}
+            src={videoSrc}
             autoPlay
             muted
             onEnded={handleVideoEnd}
