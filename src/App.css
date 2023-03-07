@@ -40,9 +40,48 @@
   font-family: var(--diablitoons-button-20);
   top: 0;
   left: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+.toon-gif-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1400px;
+  height: 100%;
+  
+}
 
+.toon-gif {
+  max-width: 100%;
+  height: auto;
+}
+
+.textVisible {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+  padding-bottom: 5rem;
+}
+
+.textHidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
 .video {
   opacity: 1;
   position: absolute;
@@ -63,23 +102,27 @@
   height: 100%;
 }
 
-.textVisible {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 1s ease-in;
-}
 
-.textHidden {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-}
 
-@media (max-width:850px) {}
+@media (max-width:850px) {
+  .textVisible {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    padding-bottom: 3rem;
+  }
+
+  .toon-gif-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    width: 450px;
+    height: 100%;
+  }
+}
