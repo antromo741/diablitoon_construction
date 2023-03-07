@@ -10,22 +10,23 @@ main {
 
 section {
   text-align: center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
   height: 100%;
-
 }
 
-.diablitoons-text-container {
+.diablitoons-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: var(--font-size-2xl);
   font-family: 'Inter';
   width: 100%;
-  height: 100%;
-
+  height: fit-content;
+  margin-top: 10rem;
 }
 
 .diablitoons-text-main {
@@ -34,104 +35,197 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-
+  width: 1300px;
+  height: fit-content;
 }
+
 
 .diablitoons-text-start {
   position: relative;
   font-weight: 600;
   color: var(--color-black);
-  padding: 1rem;
+  padding: 0rem;
   width: 800px;
-
+  text-align: left;
 }
 
-.cooking-text-start {
+.switch-text-start {
   position: relative;
   font-weight: 600;
   color: var(--diablitoons-primary-100);
-  padding: 1rem;
-  width: 450px;
-
+  padding: 0rem;
+  width: 500px;
+  text-align: left;
 }
 
 .mezcal1 {
   position: relative;
   font-weight: 600;
-  width: 450px;
+  width: 500px;
   color: var(--diablitoons-primary-100);
-  padding: 1rem;
+  padding: 0rem;
   text-align: left;
 }
 
-.cooking-text {
+.switch-text {
   position: relative;
   font-weight: 600;
   width: 800px;
   color: var(--color-black);
-  padding: 1rem;
-
+  padding: 0rem;
+  text-align: left;
 }
+
+.sub-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Inter';
+  width: 100%;
+  height: fit-content;
+  margin-top: .5rem;
+}
+
+.diablitoon-sub-header {
+  line-height: 1.5rem;
+
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: left;
+  width: 450px;
+  height: 100%;
+}
+
+
+.minting-soon {
+  margin-top: 1rem;
+  border-radius: var(--br-xs);
+  background-color: var(--diablitoons-primary-100);
+  padding: 1rem 2rem;
+  color: var(--diablitoons-neutral-100);
+  align-items: center;
+  justify-content: center;
+  display: block;
+  flex-direction: row;
+  font-size: 16px;
+  width: 110px;
+  height: fit-content;
+  text-align: center;
+}
+
+
 
 @media (max-width:850px) {
   section {
     text-align: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
     height: 100%;
-
   }
 
-  .diablitoons-text-container {
+  .diablitoons-container {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 70px;
-
+    font-size: 50px;
+    font-family: 'Inter';
     width: 100%;
-    height: 100%;
-
+    height: fit-content;
+    margin-top: 10rem;
   }
 
   .diablitoons-text-main {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: fit-content;
   }
+
+
 
   .diablitoons-text-start {
     position: relative;
     font-weight: 600;
     color: var(--color-black);
-    padding: 1rem;
+    padding: 0rem;
+    width: 350px;
+    text-align: left;
   }
 
-  .cooking-text-start {
+  .switch-text-start {
     position: relative;
     font-weight: 600;
     color: var(--diablitoons-primary-100);
-    padding: 1rem;
+    padding: 0rem;
+    width: 300px;
+    text-align: left;
   }
 
   .mezcal1 {
     position: relative;
     font-weight: 600;
     color: var(--diablitoons-primary-100);
-    padding: 1rem;
+    padding: 0rem;
+    width: 300px;
     text-align: left;
   }
 
-  .cooking-text {
+  .switch-text {
     position: relative;
     font-weight: 600;
     color: var(--color-black);
-    padding: 1rem;
+    padding: 0rem;
+    width: 350px;
+    text-align: left;
+  }
+
+  .sub-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Inter';
+    width: fit-content;
+    height: min-content;
+    margin-top: 1rem;
+  }
+
+  .diablitoon-sub-header {
+    height: fit-content;
+    position: relative;
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 16px;
+    text-align: left;
+    width: 320px;
+    height: 100%;
+  }
+
+  .minting-soon {
+    border-radius: var(--br-xs);
+    background-color: var(--diablitoons-primary-100);
+    padding: 1rem 2rem;
+    color: var(--diablitoons-neutral-100);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    flex-direction: row;
+    font-size: 16px;
+    width: 110px;
+    height: fit-content;
+    text-align: center;
   }
 }
