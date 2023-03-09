@@ -44,7 +44,7 @@ const ToonNavbar = () => {
             {/* Nav titles */}
             <div className="nav-text">
               <div>Home</div>
-              <div>{`About`}</div>
+              <div>About</div>
               <div>Goals</div>
               <div>Team</div>
               <div>Facts </div>
@@ -76,8 +76,8 @@ const ToonNavbar = () => {
           </button>
           <div className="panel-content">
             <div className="menu-column">
-              <div className="menu-btn" onClick={() => togglePanel()}>
-                <img className=".menu-icon" alt="" src={mobileMenuOpened} />
+              <div className="menu-btn-panel" onClick={() => togglePanel()}>
+                <img className=".menu-icon-panel" alt="" src={mobileMenuOpened} />
               </div>
               <div className="logo-head-panel">
                 <img className="logo-head-panel" alt="" src={panelHead} />
@@ -89,7 +89,7 @@ const ToonNavbar = () => {
                 {/* Nav titles Panel */}
                 <div className="nav-text-panel">
                   <div>Home</div>
-                  <div>{`About`}</div>
+                  <div>About</div>
                   <div>Goals</div>
                   <div>Team</div>
                   <div>Facts </div>
