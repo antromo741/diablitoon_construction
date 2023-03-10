@@ -6,7 +6,6 @@ import twitterIcon from '../../assets/twittervector.svg'
 import discordIcon from '../../assets/discordvector.svg'
 import instagramIcon from '../../assets/instagram.svg'
 import openseaIcon from '../../assets/opensea.svg'
-import headLogo from '../../assets/headlogo.svg'
 import panelHead from '../../assets/panelHead.png'
 import mobileMenuClosed from '../../assets/closed.png'
 import mobileMenuOpened from '../../assets/open.png'
@@ -32,7 +31,7 @@ const ToonNavbar = () => {
 
         <div className="menu-row">
           <div className="logo-head">
-            <img className="head-logo" alt="" src={headLogo} />
+            <img className="head-logo" alt="" src={panelHead} />
           </div>
           <div className="menu-btn" onClick={() => togglePanel()}>
             <img className="menu-icon" alt="" src={mobileMenuClosed} />
