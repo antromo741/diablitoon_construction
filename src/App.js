@@ -7,7 +7,7 @@ import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
 
 function App() {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(true);
 
   const handleVideoEnd = () => {
     setShowText(true);

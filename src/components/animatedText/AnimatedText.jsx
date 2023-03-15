@@ -41,11 +41,10 @@ const AnimatedText = () => {
           </div>
           <div className="sub-column">
             <div className="diablitoon-sub-header">
-              <strong>Diablitoons</strong> is an avatar
-              <strong> Mexican </strong>
-              project pushing the boundaries of
-              <strong> culture, </strong>
-              <strong> art, </strong>and<strong> technology.</strong>
+              <strong>Mexican avatar </strong> project of
+              <strong> 13,333 </strong> little <strong>Diablitos </strong>
+              pushing the boundaries of <strong> art, culture </strong>and
+              <strong> technology.</strong>
             </div>
             <div className="minting-soon">
               <div className="home">Minting soon</div>
