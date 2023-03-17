@@ -3,24 +3,28 @@ import './animatedText.css'
 import { useState, useEffect } from 'react'
 
 const AnimatedText = () => {
-  const [wordIndex, setWordIndex] = useState(0)
-  const [showCookingText, setShowCookingText] = useState(false)
+  const [wordIndex, setWordIndex] = useState(0);
+  const [showCookingText, setShowCookingText] = useState(false);
+  const [activeWordIndex, setActiveWordIndex] = useState(0);
 
-  const words = ['Art', 'Mezcal', 'Party', 'Tacos', 'Family', 'YOU.']
+  const words = ['Art', 'Mezcal', 'Party', 'Tacos', 'Family', 'YOU.'];
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (wordIndex === words.length - 1) {
-        setShowCookingText(true)
+        setShowCookingText(true);
         setTimeout(() => {
-          setShowCookingText(false)
-          setWordIndex(0)
-        }, 2000)
+          setShowCookingText(false);
+          setWordIndex(0);
+          setActiveWordIndex(0);
+        }, 2000);
       } else {
-        setWordIndex((prevIndex) => prevIndex + 1)
+        setWordIndex((prevIndex) => prevIndex + 1);
+        setActiveWordIndex((prevIndex) => prevIndex + 1);
       }
-    }, 1000)
-    return () => clearInterval(interval)
-  })
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [wordIndex, words.length]);
 
   return (
     <main>
@@ -36,7 +40,20 @@ const AnimatedText = () => {
             </div>
 
             <div className={`${showCookingText ? 'switch-text' : 'mezcal1'}`}>
-              {showCookingText ? 'up juicy stuff' : words[wordIndex]}
+              {showCookingText ? (
+                'up juicy stuff'
+              ) : (
+                <div className="words">
+                {words.map((word, index) => (
+                  <div
+                    key={index}
+                    className={`word ${index === activeWordIndex ? 'active' : ''}`}
+                  >
+                    {word}
+                  </div>
+                ))}
+              </div>
+              )}
             </div>
           </div>
           <div className="sub-column">
