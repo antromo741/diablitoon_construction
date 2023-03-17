@@ -1,12 +1,12 @@
 import './App.css';
 import { useState } from 'react';
 import desktopVideo from './assets/introvid.mp4';
-/* import mobileVideo from "./assets/cropped/11.mp4"; */
-import mobileVideo from "./assets/mobileVid.mp4";
+import mobileVid from './assets/newVid.mp4'
 import toon from './assets/toon.gif'
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
 import { BiVolumeMute } from 'react-icons/bi'
+import { VscUnmute }  from 'react-icons/vsc'
 
 function App() {
   const [showText, setShowText] = useState(false);
@@ -22,7 +22,7 @@ function App() {
 
   const isMobile = window.matchMedia('(max-width: 800px)').matches;
 
-  const videoSrc = isMobile ? mobileVideo : desktopVideo;
+  const videoSrc = isMobile ? mobileVid : desktopVideo;
 
   return (
     <div className="App">
@@ -47,7 +47,7 @@ function App() {
             onEnded={handleVideoEnd}
           />
 
-          {isMuted ? <div className="sound-icon" onClick={handleToggleMute}><BiVolumeMute /></div> : <div className="sound-icon" onClick={handleToggleMute}><BiVolumeMute /></div>}
+          {isMuted ? <div className="sound-icon" onClick={handleToggleMute}><BiVolumeMute /></div> : <div className="sound-icon" onClick={handleToggleMute}><VscUnmute /></div>}
 
         </div>
 

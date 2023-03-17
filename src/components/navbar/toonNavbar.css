@@ -53,6 +53,14 @@ header {
     margin-right: 1rem;
 }
 
+.medium {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+text-decoration-line: underline;
+color: #414141;
+}
+
 .connect-wallet {
     border-radius: var(--br-xs);
     background-color: var(--diablitoons-primary-100);

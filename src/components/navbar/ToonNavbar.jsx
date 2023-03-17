@@ -48,7 +48,7 @@ const ToonNavbar = () => {
               <div>Goals</div>
               <div>Team</div>
               <div>FAQ</div>
-              <div>Medium</div>
+              <div className='medium'>Medium</div>
             </div>
             {/* Connect wallet */}
             <div className="connect-wallet">
