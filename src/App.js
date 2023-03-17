@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import desktopVideo from './assets/introvid.mp4';
-import mobileVid from './assets/newVid.mp4'
+import desktopVideo from './assets/desktopVid.mp4';
+import mobileVid from './assets/mobileVid.mp4'
 import toon from './assets/toon.gif'
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
