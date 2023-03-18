@@ -42,12 +42,17 @@ function App() {
         <div className={showText ? "videoHidden" : "video"} >
           <video className={showText ? "videoHidden" : "video"}
             src={videoSrc}
+            type="video/mp4"
+            preload="auto"
+            playsInline
             autoPlay
+            poster="./assets/dface_web.png"
+            controls
             muted={isMuted}
             onEnded={handleVideoEnd}
           />
 
-          {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon'/></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon"/></div>}
+          {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon' /></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon" /></div>}
 
         </div>
 
