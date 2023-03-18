@@ -90,18 +90,6 @@ const ToonNavbar = () => {
                 </div>
               </div>
             </div>
-            {/* Social media Panel */}
-        {/*     <div className="social-header-panel">
-              <img className="discord-icon" alt="" src={discordIcon} />
-              <img
-                className="twitter-icon"
-                alt=""
-                src={twitterIcon}
-                onClick={onTwitterContainerClick}
-              />
-              <img className="instagram-icon" alt="" src={instagramIcon} />
-              <img className="opensea-icon" alt="" src={openseaIcon} />
-            </div> */}
           </div>
         </div>
       </div>
