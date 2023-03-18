@@ -6,7 +6,7 @@ import toon from './assets/toon.gif'
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
 import { BiVolumeMute } from 'react-icons/bi'
-import { VscUnmute }  from 'react-icons/vsc'
+import { VscUnmute } from 'react-icons/vsc'
 
 function App() {
   const [showText, setShowText] = useState(false);
@@ -47,7 +47,7 @@ function App() {
             onEnded={handleVideoEnd}
           />
 
-          {isMuted ? <div className="sound-icon" onClick={handleToggleMute}><BiVolumeMute /></div> : <div className="sound-icon" onClick={handleToggleMute}><VscUnmute /></div>}
+          {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon'/></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon"/></div>}
 
         </div>
 
