@@ -27,8 +27,34 @@ const ToonNavbar = () => {
 
   const mobileMenu = isPanelOpen ? mobileMenuOpened : mobileMenuClosed;
   return (
-    <header>
+    <header> <div className={`panel ${!isPanelOpen ? '' : 'open'}`}>
+          <div className="panel-content">
+            <div className="menu-column">
+              <div className='panel-title-text'>Diablitoons</div>
+            </div>
+
+            <div className="nav-main-panel">
+              <div className="nav-group-panel">
+                {/* Nav titles Panel */}
+                <div className="nav-text-panel">
+                  <div>Home</div>
+                  <div>About</div>
+                  <div>Goals</div>
+                  <div>Team</div>
+                  <div>Facts </div>
+                  <div> Medium</div>
+                </div>
+                {/* Connect wallet Panel */}
+                <div className="connect-wallet-panel">
+                  <div className="home">Connect wallet</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <div className="nav-container">
+        
+     
         {/* Nav logo */}
 
         <div className="menu-row">
@@ -69,32 +95,6 @@ const ToonNavbar = () => {
           />
           <img className="instagram-icon" alt="" src={instagramIcon} />
           <img className="opensea-icon" alt="" src={openseaIcon} />
-        </div>
-
-        <div className={`panel ${isPanelOpen ? 'open' : ''}`}>
-          <div className="panel-content">
-            <div className="menu-column">
-              <div className='panel-title-text'>Diablitoons</div>
-            </div>
-
-            <div className="nav-main-panel">
-              <div className="nav-group-panel">
-                {/* Nav titles Panel */}
-                <div className="nav-text-panel">
-                  <div>Home</div>
-                  <div>About</div>
-                  <div>Goals</div>
-                  <div>Team</div>
-                  <div>Facts </div>
-                  <div> Medium</div>
-                </div>
-                {/* Connect wallet Panel */}
-                <div className="connect-wallet-panel">
-                  <div className="home">Connect wallet</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </header>
