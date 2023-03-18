@@ -20,9 +20,6 @@ const ToonNavbar = () => {
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen)
   }
-  const handlePanelClose = () => {
-    setIsPanelOpen(false)
-  }
 
   const mobileMenu = isPanelOpen ? mobileMenuOpened : mobileMenuClosed;
   return (
@@ -71,17 +68,8 @@ const ToonNavbar = () => {
         </div>
 
         <div className={`panel ${isPanelOpen ? 'open' : ''}`}>
-          <button className="closePanelWebView" onClick={handlePanelClose}>
-            Close Panel
-          </button>
           <div className="panel-content">
             <div className="menu-column">
-              {/* <div className="menu-btn-panel" onClick={() => togglePanel()}>
-                <img className=".menu-icon-panel" alt="" src={mobileMenuOpened} />
-              </div> */}
-             {/*  <div className="logo-head-panel">
-                <img className="logo-head-panel" alt="" src={panelHead} />
-              </div> */}
               <div className='panel-title-text'>Diablitoons</div>
             </div>
 
