@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import desktopVideo from './assets/desktopVid.mp4';
-import mobileVid from './assets/mobileVid.mp4'
+import mobileVid from './assets/mobileVid1080.mp4'
 import toon from './assets/toon.gif'
 import poster from "./assets/bg.png"
 import ToonNavbar from './components/navbar/ToonNavbar';
