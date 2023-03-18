@@ -27,7 +27,10 @@ const ToonNavbar = () => {
 
   const mobileMenu = isPanelOpen ? mobileMenuOpened : mobileMenuClosed;
   return (
-    <header> <div className={`panel ${!isPanelOpen ? '' : 'open'}`}>
+    <header>
+     
+      <div className="nav-container">
+          <div className={`panel ${!isPanelOpen ? '' : 'open'}`}>
           <div className="panel-content">
             <div className="menu-column">
               <div className='panel-title-text'>Diablitoons</div>
@@ -52,8 +55,6 @@ const ToonNavbar = () => {
             </div>
           </div>
         </div>
-      <div className="nav-container">
-        
      
         {/* Nav logo */}
 
