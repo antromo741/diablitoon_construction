@@ -1,6 +1,6 @@
 import React from 'react'
 import './toonNavbar.css'
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect } from 'react'
 
 import twitterIcon from '../../assets/twittervector.svg'
 import discordIcon from '../../assets/discordvector.svg'
@@ -16,6 +16,10 @@ const ToonNavbar = () => {
   }, [])
 
   const [isPanelOpen, setIsPanelOpen] = useState(false)
+
+  useEffect(() => {
+    setIsPanelOpen(false);
+  }, []);
 
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen)
