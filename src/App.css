@@ -104,19 +104,7 @@
   object-fit: cover;
 }
 
-.video::-webkit-media-controls-panel {
-  display: flex !important;
-  -webkit-box-pack: center !important;
-  -webkit-box-align: center !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 56px !important;
-  width: 100% !important;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  overflow: hidden;
-}
+
 
 .video::-webkit-media-controls-play-button {
   display: initial !important;
@@ -125,7 +113,7 @@
   margin: 0 !important;
 }
 
-.video::-webkit-media-controls-start-playback-button,
+.video::-webkit-media-controls-panel,.video::-webkit-media-controls-start-playback-button,
 .video::-webkit-media-controls-timeline-container,
 .video::-webkit-media-controls-current-time-display,
 .video::-webkit-media-controls-time-remaining-display,

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import desktopVideo from './assets/desktopVid.mp4';
 import mobileVid from './assets/mobileVid.mp4'
 import toon from './assets/toon.gif'
+import poster from "./assets/bg.png"
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
 import { BiVolumeMute } from 'react-icons/bi'
@@ -40,17 +41,17 @@ function App() {
         </div>
 
         <div className={showText ? "videoHidden" : "video"} >
-          <video className={showText ? "videoHidden" : "video"}
-            src={videoSrc}
-            type="video/mp4"
-            preload="auto"
-            playsInline
-            autoPlay
-            poster="./assets/dface_web.png"
-            controls
-            muted={isMuted}
-            onEnded={handleVideoEnd}
-          />
+            <video
+              className={showText ? "videoHidden" : "video"}
+              src={videoSrc}
+              type="video/mp4"
+              preload
+              playsInline
+              poster={poster}
+              controls
+              muted={isMuted}
+              onEnded={handleVideoEnd}
+            />
 
           {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon' /></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon" /></div>}
 
