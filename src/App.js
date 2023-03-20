@@ -10,7 +10,7 @@ import { BiVolumeMute } from 'react-icons/bi'
 import { VscUnmute } from 'react-icons/vsc'
 
 function App() {
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
   const handleVideoEnd = () => {
@@ -29,34 +29,28 @@ function App() {
     <div className="App">
       <div className='divHeader'>
         <ToonNavbar />
+      </div>  
+      <div className={showText ? "videoContainer-hidden" : "videoContainer"} >
+        <video
+          className="video"
+          src={videoSrc}
+          type="video/mp4"
+          preload
+          playsInline
+          poster={poster}
+          controls
+          muted={isMuted}
+          onEnded={handleVideoEnd}
+        />
+        {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon' /></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon" /></div>}
       </div>
       <div className='main-page'>
-
         <div className={showText ? "textVisible" : 'textHidden'}>
           <AnimatedText />
         </div>
-
         <div className={showText ? "toon-gif-container-visible" : "toon-gif-container-hidden"}>
           <img src={toon} alt="toon-gif" className="toon-gif" />
         </div>
-
-        <div className={showText ? "videoHidden" : "video"} >
-            <video
-              className={showText ? "videoHidden" : "video"}
-              src={videoSrc}
-              type="video/mp4"
-              preload
-              playsInline
-              poster={poster}
-              controls
-              muted={isMuted}
-              onEnded={handleVideoEnd}
-            />
-
-          {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon' /></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon" /></div>}
-
-        </div>
-
       </div>
     </div>
   );

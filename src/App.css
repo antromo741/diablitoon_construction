@@ -1,13 +1,15 @@
 .App {
   text-align: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin: 0;
   padding: 0;
+  background-color: var(--diablitoons-neutral-200);
+  display: flex;
+  flex-flow: column;
 }
-
 
 .divHeader {
   position: relative;
@@ -18,88 +20,38 @@
   align-items: normal;
   justify-content: flex-start;
   z-index: 2;
-
 }
 
-
-.main-page {
-  position: relative;
-  background-color: var(--diablitoons-neutral-200);
-
-  margin: 0;
-  padding: 0;
-  font-size: var(--diablitoons-button-16-size);
-  color: var(--diablitoons-neutral-700);
-  font-family: var(--diablitoons-button-20);
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.toon-gif-container-visible {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  width: 1400px;
-  height: 100%;
+.videoContainer {
   opacity: 1;
-  transition: opacity 1s ease-in;
-}
-
-.toon-gif-container-hidden {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  width: 1400px;
-  height: 100%;
-  opacity: 0;
-}
-
-.toon-gif {
-  max-width: 100%;
-  height: auto;
-}
-
-.textVisible {
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
   width: 100%;
-  height: fit-content;
-  opacity: 1;
-  transition: opacity 1s ease-in;
-  padding-bottom: 5rem;
+  height: 100vh;
 }
 
-.textHidden {
-  position: relative;
-  top: 0;
-  left: 0;
+.videoContainer-hidden {
+  transition: opacity 1s ease-in;
   opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
   width: 100%;
   height: 100%;
 }
 
 .video {
-  opacity: 1;
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 
 .video::-webkit-media-controls-play-button {
   display: initial !important;
@@ -107,20 +59,6 @@
   width: 56px !important;
   margin: 0 !important;
 }
-
-/* .video::-webkit-media-controls-panel {
-  display: flex !important;
-  -webkit-box-pack: center !important;
-  -webkit-box-align: center !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 56px !important;
-  width: 100% !important;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  overflow: hidden;
-} */
 
 .video::-webkit-media-controls-panel,
 .video::-webkit-media-controls-start-playback-button,
@@ -133,32 +71,88 @@
   display: none !important;
 }
 
-.videoHidden {
+.sound-icon {
+  position: absolute;
+  bottom: 26px;
+  right: 20px;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.main-page {
+  overflow: visible;
   position: relative;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  display: none;
+  background-color: var(--diablitoons-neutral-200);
+  margin: 0;
+  padding: 0;
+  font-size: var(--diablitoons-button-16-size);
+  color: var(--diablitoons-neutral-700);
+  font-family: var(--diablitoons-button-20);
+  gap: 102px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+.textVisible {
+  position: relative;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+  transition: opacity 1s ease-in;
   width: 100%;
   height: 100%;
 }
 
-.sound-icon {
+.textHidden {
   position: relative;
-  bottom: 26px;
-  right: 20px;
-  border: none;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
 
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+}
+
+.toon-gif-container-visible {
+  position: relative;
+  top: 0%;
+  z-index: 1;
+  display: flex;
+  max-width: 1400px;
+  max-height: 100%;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.toon-gif-container-hidden {
+  position: relative;
+  top: 0%;
+  z-index: 0;
+  display: flex;
+  max-width: 1400px;
+  height: 0vh;
+  opacity: 0;
+}
+
+.toon-gif {
+  display: flex;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width:850px) {
   .textVisible {
     position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
     height: fit-content;
     opacity: 1;
