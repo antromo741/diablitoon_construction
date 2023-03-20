@@ -151,13 +151,32 @@
 }
 
 @media (max-width:850px) {
+  .main-page {
+    overflow: visible;
+    position: relative;
+    background-color: var(--diablitoons-neutral-200);
+    margin: 0;
+    padding: 0;
+    font-size: var(--diablitoons-button-16-size);
+    color: var(--diablitoons-neutral-700);
+    font-family: var(--diablitoons-button-20);
+    gap: 102px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+  }
+
   .textVisible {
     position: relative;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     opacity: 1;
     transition: opacity 1s ease-in;
-    padding-bottom: 3rem;
+   
   }
 
   .toon-gif-container {

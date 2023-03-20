@@ -58,9 +58,8 @@ const AnimatedText = () => {
           </div>
           <div className="sub-column">
             <div className="diablitoon-sub-header">
-              <strong>Mexican avatar </strong> project of
-              <strong> 13,333 </strong> little <strong>Diablitos </strong>
-              pushing the boundaries of <strong> art, culture </strong>and
+              We are a family of <strong> 13,333 Diablitos </strong> ready to
+              <strong > explore </strong> the whole world and bring joy to everyone with <strong> art, culture </strong>and
               <strong> technology.</strong>
             </div>
             <div className="minting-soon">
