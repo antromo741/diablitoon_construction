@@ -10,7 +10,7 @@ import { BiVolumeMute } from 'react-icons/bi'
 import { VscUnmute } from 'react-icons/vsc'
 
 function App() {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
 
   const handleVideoEnd = () => {

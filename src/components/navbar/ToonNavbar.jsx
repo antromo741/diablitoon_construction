@@ -30,46 +30,16 @@ const ToonNavbar = () => {
     <header>
      
       <div className="nav-container">
-          <div className={`panel ${!isPanelOpen ? '' : 'open'}`}>
-          <div className="panel-content">
-            <div className="menu-column">
-              <div className='panel-title-text'>Diablitoons</div>
-            </div>
-
-            <div className="nav-main-panel">
-              <div className="nav-group-panel">
-                {/* Nav titles Panel */}
-                <div className="nav-text-panel">
-                  <div>Home</div>
-                  <div>About</div>
-                  <div>Goals</div>
-                  <div>Team</div>
-                  <div>Facts </div>
-                  <div> Medium</div>
-                </div>
-                {/* Connect wallet Panel */}
-                <div className="connect-wallet-panel">
-                  <div className="home">Connect wallet</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-     
-        {/* Nav logo */}
-
-        <div className="menu-row">
+       
           <div className="logo-head">
             <img className="head-logo" alt="" src={clearHead} />
           </div>
           <div className="menu-btn" onClick={() => togglePanel()}>
             <img className="menu-icon" alt="" src={mobileMenu} />
           </div>
-        </div>
-
+        
         <div className="nav-main">
           <div className="nav-group">
-            {/* Nav titles */}
             <div className="nav-text">
               <div>Home</div>
               <div>About</div>
@@ -78,14 +48,11 @@ const ToonNavbar = () => {
               <div>FAQ</div>
               <div className='medium'>Medium</div>
             </div>
-            {/* Connect wallet */}
             <div className="connect-wallet">
               <div className="home">Connect wallet</div>
             </div>
           </div>
         </div>
-
-        {/* Social media */}
         <div className="social-header">
           <img className="discord-icon" alt="" src={discordIcon} />
           <img
@@ -103,3 +70,27 @@ const ToonNavbar = () => {
 }
 
 export default ToonNavbar
+
+
+ /*         <div className={`panel ${!isPanelOpen ? '' : 'open'}`}>
+          <div className="panel-content">
+            <div className="menu-column">
+              <div className='panel-title-text'>Diablitoons</div>
+            </div>
+            <div className="nav-main-panel">
+              <div className="nav-group-panel">
+                <div className="nav-text-panel">
+                  <div>Home</div>
+                  <div>About</div>
+                  <div>Goals</div>
+                  <div>Team</div>
+                  <div>Facts </div>
+                  <div> Medium</div>
+                </div>
+                <div className="connect-wallet-panel">
+                  <div className="home">Connect wallet</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */
