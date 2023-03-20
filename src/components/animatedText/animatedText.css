@@ -27,7 +27,6 @@ section {
   font-family: 'Inter';
   width: 100%;
   height: fit-content;
-  margin-top: 88px;
 }
 
 .diablitoons-text-main {
@@ -96,11 +95,10 @@ section {
 .word {
   background-color: var(--diablitoons-neutral-200);
   position: absolute;
-  bottom: -100%;
   animation: slide-out 1s forwards;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
   opacity: 1;
 }
 
@@ -308,11 +306,10 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-family: 'Inter';
     width: fit-content;
-    height: fit-content;
-    margin-top: 60px;
+    height: 100%;
     margin-left: 1rem;
   }
 

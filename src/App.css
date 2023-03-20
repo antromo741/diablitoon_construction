@@ -96,6 +96,7 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 88px;
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
@@ -152,7 +153,7 @@
 
 @media (max-width:850px) {
   .main-page {
-    overflow: visible;
+    overflow: hidden;
     position: relative;
     background-color: var(--diablitoons-neutral-200);
     margin: 0;
@@ -160,11 +161,12 @@
     font-size: var(--diablitoons-button-16-size);
     color: var(--diablitoons-neutral-700);
     font-family: var(--diablitoons-button-20);
-    gap: 102px;
+    gap: 0px;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 60px;
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
@@ -173,19 +175,61 @@
   .textVisible {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: min-content;
     opacity: 1;
     transition: opacity 1s ease-in;
-   
+
   }
 
-  .toon-gif-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+  .toon-gif-container-visible {
+    margin-top: 50px;
     position: relative;
-    width: 450px;
+    z-index: 1;
+    display: flex;
+    max-width: 800px;
+    min-width: none;
+    height: auto;
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+
+  .toon-gif-container-hidden {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    width: 400px;
+    height: auto;
+    opacity: 0;
+  }
+
+  .videoContainer {
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .videoContainer-hidden {
+    transition: opacity 1s ease-in;
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    width: 100%;
     height: 100%;
+  }
+
+  .video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

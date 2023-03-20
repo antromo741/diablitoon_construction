@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import desktopVideo from './assets/desktopVid.mp4';
-import mobileVid from './assets/mobileVid1080.mp4'
-import toon from './assets/toon.gif'
+import newMobile from './assets/newMobile.mp4';
+import toon from './assets/toon.gif';
 import poster from "./assets/bg.png"
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
@@ -23,7 +23,7 @@ function App() {
 
   const isMobile = window.matchMedia('(max-width: 800px)').matches;
 
-  const videoSrc = isMobile ? mobileVid : desktopVideo;
+  const videoSrc = isMobile ? newMobile : desktopVideo;
 
   return (
     <div className="App">
