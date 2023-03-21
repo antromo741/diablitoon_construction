@@ -138,20 +138,29 @@
 
 @media (max-width: 850px) {
 
-    /* for panel */
+    /* for panel
+    
+      -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        -webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 1s ease-in-out;
+        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
+        
+        
+           -webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        -webkit-transform: translate3d(0, 10.6%, 0);
+        transform: translate3d(0, 10.6%, 0);
+        */
     .panel {
         display: block;
         width: 100%;
         height: 100vh;
         background-color: var(--diablitoons-neutral-200);
         z-index: 3;
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
-        -webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 1s ease-in-out;
-        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
+        touch-action: none;
         opacity: 1;
         position: absolute;
-        top: 0%;
+        top: -100%;
     }
 
     .panel.open {
@@ -160,13 +169,10 @@
         height: 100vh;
         background-color: var(--diablitoons-neutral-200);
         z-index: 3;
-        -webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
-        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-        -webkit-transform: translate3d(0, 10.6%, 0);
-        transform: translate3d(0, 10.6%, 0);
+        touch-action: none;
         opacity: 1;
         position: absolute;
-        top: 0%;
+        top: 10%;
     }
     
     .panel-content {
