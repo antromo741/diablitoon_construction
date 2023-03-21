@@ -161,6 +161,8 @@
         opacity: 1;
         position: absolute;
         top: -100%;
+        -webkit-transition: top 0.5s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
 
     .panel.open {
@@ -174,7 +176,7 @@
         position: absolute;
         top: 10%;
     }
-    
+
     .panel-content {
         margin-top: 50px;
         display: flex;
