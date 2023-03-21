@@ -14,10 +14,10 @@ import Lottie from "lottie-react";
 import animationData from './assets/dAnimation.json';
 
 function App() {
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [showLottie, setShowLottie] = useState(true);
-  /*   const [isPanelOpen, setIsPanelOpen] = useState(false) */
+  const [isPanelOpen, setIsPanelOpen] = useState(false)
 
   const handleVideoEnd = () => {
     setShowText(true);
@@ -31,19 +31,21 @@ function App() {
     videoRef.current.play();
   };
 
-  /*   const togglePanel = () => {
-      setIsPanelOpen(!isPanelOpen)
-    } */
+  const togglePanel = () => {
+    setIsPanelOpen(!isPanelOpen)
+  }
 
   const isMobile = window.matchMedia('(max-width: 800px)').matches;
 
   const videoSrc = isMobile ? newMobile : desktopVideo;
   const videoRef = useRef(videoSrc);
+
   return (
     <div className="App">
-      <SidePanel />
+      <SidePanel isPanelOpen={isPanelOpen} />
+
       <div className='divHeader'>
-        <ToonNavbar />
+        <ToonNavbar togglePanel={togglePanel} isPanelOpen={isPanelOpen} />
       </div>
 
       <div className={showText ? "videoContainer-hidden" : "videoContainer"} >
@@ -57,7 +59,7 @@ function App() {
           className="video"
           src={videoSrc}
           type="video/mp4"
-          preload
+          preload="true"
           playsInline
           poster={poster}
           controls

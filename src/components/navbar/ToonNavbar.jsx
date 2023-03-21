@@ -1,6 +1,6 @@
 import React from 'react'
 import './toonNavbar.css'
-import { useCallback, useState } from 'react'
+import { useCallback } from 'react'
 
 import twitterIcon from '../../assets/twittervector.svg'
 import discordIcon from '../../assets/discordvector.svg'
@@ -10,15 +10,15 @@ import clearHead from '../../assets/dface_web.png'
 import mobileMenuClosed from '../../assets/closed.png'
 import mobileMenuOpened from '../../assets/open.png'
 
-const ToonNavbar = () => {
+const ToonNavbar = ({togglePanel, isPanelOpen}) => {
   const onTwitterContainerClick = useCallback(() => {
     window.open('https://twitter.com/Diablitoons')
   }, [])
-  const [isPanelOpen, setIsPanelOpen] = useState(true)
 
-  const togglePanel = () => {
-    setIsPanelOpen(!isPanelOpen)
-  } 
+  const handleClick = () => {
+    togglePanel();
+  };
+
   const mobileMenu = isPanelOpen ? mobileMenuOpened : mobileMenuClosed;
   return (
     <header>
@@ -28,7 +28,7 @@ const ToonNavbar = () => {
           <div className="logo-head">
             <img className="head-logo" alt="" src={clearHead} />
           </div>
-          <div className="menu-btn" onClick={() => togglePanel()}>
+          <div className="menu-btn" onClick={handleClick}>
             <img className="menu-icon" alt="" src={mobileMenu} />
           </div>
         
