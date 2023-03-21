@@ -1,6 +1,6 @@
 import React from 'react'
 import './toonNavbar.css'
-import { useCallback, useState, useEffect } from 'react'
+import { useCallback, useState } from 'react'
 
 import twitterIcon from '../../assets/twittervector.svg'
 import discordIcon from '../../assets/discordvector.svg'
@@ -14,17 +14,11 @@ const ToonNavbar = () => {
   const onTwitterContainerClick = useCallback(() => {
     window.open('https://twitter.com/Diablitoons')
   }, [])
-
-  const [isPanelOpen, setIsPanelOpen] = useState(false)
-
-  useEffect(() => {
-    setIsPanelOpen(false);
-  }, []);
+  const [isPanelOpen, setIsPanelOpen] = useState(true)
 
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen)
-  }
-
+  } 
   const mobileMenu = isPanelOpen ? mobileMenuOpened : mobileMenuClosed;
   return (
     <header>
@@ -72,25 +66,4 @@ const ToonNavbar = () => {
 export default ToonNavbar
 
 
- /*         <div className={`panel ${!isPanelOpen ? '' : 'open'}`}>
-          <div className="panel-content">
-            <div className="menu-column">
-              <div className='panel-title-text'>Diablitoons</div>
-            </div>
-            <div className="nav-main-panel">
-              <div className="nav-group-panel">
-                <div className="nav-text-panel">
-                  <div>Home</div>
-                  <div>About</div>
-                  <div>Goals</div>
-                  <div>Team</div>
-                  <div>Facts </div>
-                  <div> Medium</div>
-                </div>
-                <div className="connect-wallet-panel">
-                  <div className="home">Connect wallet</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */
+ /*  */

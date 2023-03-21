@@ -1,21 +1,24 @@
 import './App.css';
-import { useState, useRef  } from 'react';
+import { useState, useRef } from 'react';
 import desktopVideo from './assets/desktopVid.mp4';
 import newMobile from './assets/newMobile.mp4';
 import toon from './assets/toon.gif';
 import poster from "./assets/white-bg.png";
-import dgifPoster from './assets/dgif.gif'
+/* import dgifPoster from './assets/dgif.gif' */
 import ToonNavbar from './components/navbar/ToonNavbar';
 import AnimatedText from './components/animatedText/AnimatedText';
-import { BiVolumeMute } from 'react-icons/bi'
-import { VscUnmute } from 'react-icons/vsc'
+import SidePanel from './components/sidePanel/SidePanel';
+import { BiVolumeMute } from 'react-icons/bi';
+import { VscUnmute } from 'react-icons/vsc';
 import Lottie from "lottie-react";
 import animationData from './assets/dAnimation.json';
 
 function App() {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const [showLottie, setShowLottie] = useState(true);
+  /*   const [isPanelOpen, setIsPanelOpen] = useState(false) */
+
   const handleVideoEnd = () => {
     setShowText(true);
   };
@@ -27,21 +30,27 @@ function App() {
     setShowLottie(false);
     videoRef.current.play();
   };
+
+  /*   const togglePanel = () => {
+      setIsPanelOpen(!isPanelOpen)
+    } */
+
   const isMobile = window.matchMedia('(max-width: 800px)').matches;
 
   const videoSrc = isMobile ? newMobile : desktopVideo;
   const videoRef = useRef(videoSrc);
   return (
     <div className="App">
+      <SidePanel />
       <div className='divHeader'>
         <ToonNavbar />
       </div>
 
       <div className={showText ? "videoContainer-hidden" : "videoContainer"} >
-      {showLottie && (
-        <div className="lottie-container">
-          <Lottie className='lottie' animationData={animationData} loop={true} onClick={handleLottieClick}  />
-        </div>  
+        {showLottie && (
+          <div className="lottie-container">
+            <Lottie className='lottie' animationData={animationData} loop={true} onClick={handleLottieClick} />
+          </div>
         )}
 
         <video
