@@ -5,9 +5,8 @@ const SidePanel = ({ isPanelOpen }) => {
   return (
     <div className={`panel ${isPanelOpen ? 'open' : ''}`}>
       <div className="panel-content">
-        <div className="menu-column">
-          <div className="panel-title-text">Diablitoons</div>
-        </div>
+        <div className="panel-title-text">Diablitoons</div>
+
         <div className="nav-main-panel">
           <div className="nav-group-panel">
             <div className="nav-text-panel">

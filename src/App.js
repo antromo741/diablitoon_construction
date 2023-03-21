@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import desktopVideo from './assets/desktopVid.mp4';
 import newMobile from './assets/newMobile.mp4';
 import toon from './assets/toon.gif';
@@ -17,7 +17,8 @@ function App() {
   const [showText, setShowText] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [showLottie, setShowLottie] = useState(true);
-  const [isPanelOpen, setIsPanelOpen] = useState(false)
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const [playbackStarted, setPlaybackStarted] = useState(false);
 
   const handleVideoEnd = () => {
     setShowText(true);
@@ -35,10 +36,17 @@ function App() {
     setIsPanelOpen(!isPanelOpen)
   }
 
-  const isMobile = window.matchMedia('(max-width: 800px)').matches;
+  const isMobile = window.matchMedia('(max-width: 850px)').matches;
 
   const videoSrc = isMobile ? newMobile : desktopVideo;
   const videoRef = useRef(videoSrc);
+
+  useEffect(() => {
+    if (videoRef.current.paused && !playbackStarted && showLottie === false) {
+      videoRef.current.play();
+      setPlaybackStarted(true);
+    }
+  }, [playbackStarted, showLottie]);
 
   return (
     <div className="App">
@@ -51,22 +59,26 @@ function App() {
       <div className={showText ? "videoContainer-hidden" : "videoContainer"} >
         {showLottie && (
           <div className="lottie-container">
+            <div className="clickable-area" onClick={handleLottieClick}></div>
             <Lottie className='lottie' animationData={animationData} loop={true} onClick={handleLottieClick} />
           </div>
         )}
-
-        <video
-          className="video"
-          src={videoSrc}
-          type="video/mp4"
-          preload="true"
-          playsInline
-          poster={poster}
-          controls
-          muted={isMuted}
-          onEnded={handleVideoEnd}
-          ref={videoRef}
-        />
+        <div className="video-border" onClick={handleLottieClick}>
+          <video
+            className="video"
+            src={videoSrc}
+            type="video/mp4"
+            preload="true"
+            playsInline
+            poster={poster}
+            controls
+            muted={isMuted}
+            onEnded={handleVideoEnd}
+            ref={videoRef}
+            onPlay={handleLottieClick}
+            onClick={handleLottieClick}
+          />
+        </div>
         {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon' /></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon" /></div>}
       </div>
       <div className='main-page'>

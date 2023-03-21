@@ -186,15 +186,6 @@
     }
 
 
-    .menu-column {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: var(--padding-sm);
-        width: 100%;
-    }
-
     .panel-title-text {
         width: 165px;
         height: 38px;
