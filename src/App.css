@@ -52,23 +52,18 @@
   z-index: 2;
   max-width: 800px;
   max-height: 800px;
+  margin-right: 2.5rem;
 }
 
 .clickable-area {
-
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  /* increase width to make it larger than the lottie element */
   height: 100vh;
-  /* increase height to make it larger than the lottie element */
   opacity: 1;
-  /* make it transparent */
   cursor: pointer;
-  /* set cursor to pointer to indicate it's clickable */
 }
-
 
 .lottie {
   position: relative;
@@ -131,7 +126,7 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  
+
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
@@ -202,7 +197,7 @@
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    
+
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
@@ -265,36 +260,19 @@
 
   .video {
     position: absolute;
-    bottom: 0;
+    top: 0;
     cursor: pointer;
-    z-index: 4;
+    z-index: 2;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .video-border {
-    position: absolute;
-    top: 0;
-
-    margin-top: 133px;
-
-    border-radius: 20px;
-    overflow: hidden;
-    border: 2px solid #D3D5DE;
-    width: 95%;
-    /* increase width to make it larger than the lottie element */
-    height: 84%;
-    /* increase height to make it larger than the lottie element */
-    opacity: 1;
-    z-index: 2;
   }
 
   .lottie-container {
     position: relative;
     z-index: 3;
     max-width: 800px;
-    max-height: 800px;
+    max-height: 800px;  margin-right: 2rem;
   }
 
   .clickable-area {
@@ -303,21 +281,19 @@
     left: 0;
     margin-top: -3rem;
     width: 100vw;
-    /* increase width to make it larger than the lottie element */
     height: 100vh;
-    /* increase height to make it larger than the lottie element */
     opacity: 0;
-    /* make it transparent */
-    /* set cursor to pointer to indicate it's clickable */
+    z-index: 3;
   }
 
 
   .lottie {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 100%;
     cursor: pointer;
+  
   }
 
 }

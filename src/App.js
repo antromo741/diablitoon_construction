@@ -63,7 +63,6 @@ function App() {
             <Lottie className='lottie' animationData={animationData} loop={true} onClick={handleLottieClick} />
           </div>
         )}
-        <div className="video-border" onClick={handleLottieClick}>
           <video
             className="video"
             src={videoSrc}
@@ -78,7 +77,7 @@ function App() {
             onPlay={handleLottieClick}
             onClick={handleLottieClick}
           />
-        </div>
+
         {isMuted ? <div onClick={handleToggleMute}><BiVolumeMute className='sound-icon' /></div> : <div onClick={handleToggleMute}><VscUnmute className="sound-icon" /></div>}
       </div>
       <div className='main-page'>
