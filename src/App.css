@@ -271,10 +271,11 @@
   .lottie-container {
     position: relative;
     z-index: 3;
-    max-width: 800px;
-    max-height: 800px;  margin-right: 2rem;
+    max-width: 450px;
+    max-height: 450px;  
+    margin-right: 1.5rem;
   }
-
+/* 800px and rem before last commit */
   .clickable-area {
     position: absolute;
     top: 0;
