@@ -50,8 +50,8 @@
 .lottie-container {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 450px;
+  max-height: 450px;
   margin-right: 2.5rem;
 }
 
@@ -271,8 +271,8 @@
   .lottie-container {
     position: relative;
     z-index: 3;
-    max-width: 450px;
-    max-height: 450px;  
+    width: 350px;
+    height: 350px;  
     margin-right: 1.5rem;
   }
 /* 800px and rem before last commit */
@@ -283,8 +283,9 @@
     margin-top: -3rem;
     width: 100vw;
     height: 100vh;
-    opacity: 0;
+    opacity: 1;
     z-index: 3;
+    background-color: blue;
   }
 
 

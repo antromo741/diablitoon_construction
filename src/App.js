@@ -60,7 +60,7 @@ function App() {
         {showLottie && (
           <div className="lottie-container">
             <div className="clickable-area" onClick={handleLottieClick}></div>
-            <Lottie className='lottie' animationData={animationData} loop={true} onClick={handleLottieClick} />
+            <Lottie className='lottie' animationData={animationData} loop={false} onComplete={handleLottieClick} onClick={handleLottieClick} />
           </div>
         )}
           <video
